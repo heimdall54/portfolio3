@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: white;
+    margin: 15px;
+    z-index: 1;
+}
+
+.social {
+    padding-right: 5px;
+}
+
+.social a {
+    font-size: 1.5rem;
+    color: white;
+    transition: all;
+    transition-duration: 300ms;
+    padding: 0 5px;
+}
+
+.social a:hover {
+    color: red
+}
