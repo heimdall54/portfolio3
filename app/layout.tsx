@@ -12,11 +12,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [loading, setLoading] = React.useState(true)
+  const [loading, setLoading] = React.useState(false)
 
-  // React.useEffect(() => {
-  //   setTimeout(() => setLoading(true), 3000)
-  // }, [])
+  React.useEffect(() => {
+    setTimeout(() => setLoading(true), 3000)
+  }, [])
 
   return (
     <html lang="fr">
