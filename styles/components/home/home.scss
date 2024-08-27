@@ -1,24 +1,12 @@
 .home {
-    height: 100%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.particle {
-    position: absolute;
-
-    width: 90%;
-    height: 90%;
-}
-
-.container {
-    display: inline-block;
-}
-
-.text {
+  .text {
     font-size: 5em;
     letter-spacing: 10px;
     font-family: monospace;
@@ -26,60 +14,69 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(19), cursor .4s step-end infinite alternate;
-}
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
 
-.sous-text {
+  .sous-text {
     font-size: 2.5em;
     letter-spacing: 5px;
     /* border-right: 5px solid; */
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2s steps(19), cursor .4s step-end infinite alternate;
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
+}
+
+.particle {
+  position: absolute;
+
+  width: 90%;
+  height: 90%;
+}
+
+.container {
+  display: inline-block;
 }
 
 @keyframes cursor {
-    50% {
-        border-color: black
-    }
+  50% {
+    border-color: black;
+  }
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+    width: 0;
+  }
 }
 
+@media screen and (max-width: 700px) {
+  // .particle {
+  //     display: none;
+  // }
 
-@media screen and (max-width:700px) {
-    // .particle {
-    //     display: none;
-    // }
+  .container {
+    display: block;
+  }
 
-    .container {
-        display: block;
-    }
+  .text {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-family: monospace;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
 
+  .sous-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
 
-
-    .text {
-        font-size: 1.5rem;
-        letter-spacing: 3px;
-        font-family: monospace;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 2s steps(19), cursor .4s step-end infinite alternate;
-    }
-
-    .sous-text {
-        font-size: 1rem;
-        letter-spacing: 2px;
-
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing 2s steps(19), cursor .4s step-end infinite alternate;
-    }
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
 }

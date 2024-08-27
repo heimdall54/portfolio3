@@ -1,34 +1,28 @@
-"use client"
+import Nav from "@/components/Nav";
+import Header from "@/components/header";
+import ParticleProvider from "@/context/ParticleConext";
+import "@/styles/index.scss";
+import type { Metadata } from "next";
 
-import Nav from "@/components/Nav"
-import Header from "@/components/header"
-import Loader from "@/components/loader"
-import "@/styles/index.scss"
-import React from 'react'
+export const metadata: Metadata = {
+  title: "portfolio",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
-  const [loading, setLoading] = React.useState(false)
-
-  React.useEffect(() => {
-    setTimeout(() => setLoading(true), 3000)
-  }, [])
-
   return (
     <html lang="fr">
-      <body >
-        {loading ? (
-          <>
-            <Header />
-            <Nav />
-            {children}
-          </>
-        ) : <Loader />}
+      <body>
+        <ParticleProvider>
+          <Header />
+
+          <Nav />
+          {children}
+        </ParticleProvider>
       </body>
     </html>
-  )
+  );
 }
