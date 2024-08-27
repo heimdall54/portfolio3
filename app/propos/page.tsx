@@ -8,7 +8,7 @@ export default function Propos() {
         <p className="sous-text">
           Je m'appelle Keim thomas passionner de développement et plus
           particulièrement de développement web je me suis formé en autodidacte
-          grâce au site telle que "Udemy", "Dyma" et "Openclassrooms" je peux
+          grâce au site telle que &ldquo;Udemy&ldquo;, &ldquo;Dyma&ldquo; et &ldquo;Openclassrooms&ldquo; je peux
           vous aider à réaliser votre site du cahier des charges à la mise en
           ligne
         </p>
