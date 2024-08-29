@@ -18,7 +18,7 @@ export default function ParticleProvider({ children }: any) {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          fullScreen: { enable: false },
+          fullScreen: { enable: true },
           background: {
             color: {
               value: "",

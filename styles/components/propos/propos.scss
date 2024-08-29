@@ -1,0 +1,100 @@
+@import "../../typed.scss";
+
+.propos {
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 50%;
+  }
+
+  .text {
+    font-size: 2.3em;
+    letter-spacing: 5px;
+    font-family: monospace;
+    /* border-right: 5px solid; */
+    width: 100%;
+    margin: 0 0 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
+
+  .sous-text {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    overflow: hidden;
+    /* border-right: 5px solid; */
+    width: 100%;
+    animation: typing 2s steps(19), cursor 0.4s step-end infinite alternate;
+  }
+
+  .input-wrapper {
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    width: 100%;
+    > input,
+    > .placeholder {
+      display: block;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+    }
+    > .placeholder {
+      pointer-events: none;
+      @include typed(
+        "Qui je suis ?",
+        "Je m'appelle Keim thomas passionner de développement et plus particulièrement de développement web je me suis formé en autodidacte grâce au site telle que Udemy, Dyma et Openclassrooms je peux vous aider  à réaliser votre site du cahier des charges à la mise en ligne "
+      );
+    }
+    > input {
+      &:focus,
+      &:active {
+        + .placeholder {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .propos {
+    .container {
+      width: 80% !important;
+    }
+
+    .input-wrapper {
+      font-size: 1.2rem !important;
+      text-align: center;
+    }
+  }
+}

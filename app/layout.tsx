@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import Header from "@/components/header";
-import ParticleProvider from "@/context/ParticleConext";
+import ParticleProvider from "@/context/ParticleContext";
 import "@/styles/index.scss";
 import type { Metadata } from "next";
 
@@ -18,7 +18,6 @@ export default function RootLayout({
       <body>
         <ParticleProvider>
           <Header />
-
           <Nav />
           {children}
         </ParticleProvider>
