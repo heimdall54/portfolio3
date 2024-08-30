@@ -56,6 +56,10 @@
   //     display: none;
   // }
 
+  .home {
+    width: 100%;
+  }
+
   .container {
     display: block;
   }
@@ -84,9 +88,11 @@
 @media screen and (max-width: 760px) {
   .text {
     font-size: 2.3rem !important;
+    letter-spacing: 5px !important;
   }
 
   .sous-text {
     font-size: 1.3rem !important;
+    letter-spacing: 2.5px !important;
   }
 }
