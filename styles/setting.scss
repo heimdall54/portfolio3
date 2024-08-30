@@ -11,3 +11,9 @@ body {
   width: 100vw;
   height: 100vmin;
 }
+
+@media screen and (max-width: 760px) {
+  body {
+    height: 100vmax;
+  }
+}
